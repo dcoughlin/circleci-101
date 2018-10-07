@@ -9,7 +9,7 @@ jobs:
           name: clone a remote repo
           command: |
             echo "Start clone..."
-            git clone git@github.com:dcoughlin/litesteps.git
+            git clone git@github.com:dcoughlin/mymemories.git
   two:
     docker:
        - image: circleci/ruby:2.4.1

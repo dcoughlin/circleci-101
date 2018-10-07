@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-        fingerprints:
-          - "b3:36:6d:4e:b4:e4:f5:e2:fa:ea:37:fb:13:d2:d3:da"
+          fingerprints:
+            - "b3:36:6d:4e:b4:e4:f5:e2:fa:ea:37:fb:13:d2:d3:da"
       - run: 
           name: clone a remote repo
           command: |

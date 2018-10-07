@@ -4,16 +4,15 @@ jobs:
     docker:
        - image: circleci/ruby:2.4.1
     steps:
-      - checkout
       - add_ssh_keys:
           fingerprints:
             - "b3:36:6d:4e:b4:e4:f5:e2:fa:ea:37:fb:13:d2:d3:da"
-            - "a1:f8:55:8f:8f:17:de:a4:d4:71:0d:70:ca:57:11:c5"
+      - checkout
       - run: 
           name: clone a remote repo
           command: |
             echo "Start clone..."
-            git clone git@github.com:dcoughlin/mymemories.git
+            git clone --verbose git@github.com:dcoughlin/mymemories.git
   two:
     docker:
        - image: circleci/ruby:2.4.1

@@ -35,6 +35,15 @@ jobs:
           fi
 workflows:
   version: 2
+  nightly:
+     triggers:
+       - schedule:
+           cron: "27 2 * * *"
+           filters:
+             branches:
+               only:
+                 - master
+                 - beta
   one_and_two:
     jobs:
       - one

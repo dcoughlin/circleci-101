@@ -35,23 +35,16 @@ jobs:
           fi
 workflows:
   version: 2
-  nightly-workflow:
-     triggers:
-       - schedule:
-           cron: "23 5 * * *" #UTC time
+  Dev-Build-Workflow:
+    triggers:
+      - schedule:
+          cron: "25 5 * * *" #UTC time
           filters:
             branches:
               only:
-                 - master
+                - master
     jobs:
-      - one
-         filters:
-              branches:
-                  only:
-                    - master
-      - two:
-          requires:
-            - one
+      - one:
           filters:
               branches:
                   only:

@@ -38,14 +38,17 @@ workflows:
   nightly-workflow:
      triggers:
        - schedule:
-           cron: "20 5 * * *" #UTC time
+           cron: "23 5 * * *" #UTC time
           filters:
             branches:
               only:
                  - master
-  one_and_two:
     jobs:
       - one
+         filters:
+              branches:
+                  only:
+                    - master
       - two:
           requires:
             - one

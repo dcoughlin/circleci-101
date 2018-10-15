@@ -38,15 +38,18 @@ workflows:
   nightly:
      triggers:
        - schedule:
-           cron: "27 2 * * *"
-           filters:
-             branches:
-               only:
+           cron: "0 23 * * *" #UTC time, 4pm PST
+          filters:
+            branches:
+              only:
                  - master
-                 - beta
   one_and_two:
     jobs:
       - one
       - two:
           requires:
             - one
+          filters:
+              branches:
+                  only:
+                    - master

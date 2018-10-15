@@ -38,7 +38,7 @@ workflows:
   Dev-Build-Workflow:
     triggers:
       - schedule:
-          cron: "23 2 * * *" #UTC time
+          cron: "25 2 * * *" #UTC time
           filters:
             branches:
               only:
@@ -49,17 +49,4 @@ workflows:
               branches:
                   only:
                     - master
- Dev2-Build-Workflow:
-    triggers:
-      - schedule:
-          cron: "20 1 * * *" #UTC time
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - two:
-          filters:
-              branches:
-                  only:
-                    - master
+

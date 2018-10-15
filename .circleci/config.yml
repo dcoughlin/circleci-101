@@ -35,10 +35,10 @@ jobs:
           fi
 workflows:
   version: 2
-  nightly:
+  nightly-workflow:
      triggers:
        - schedule:
-           cron: "0 23 * * *" #UTC time, 4pm PST
+           cron: "20 5 * * *" #UTC time
           filters:
             branches:
               only:
